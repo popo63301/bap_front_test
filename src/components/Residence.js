@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getPriceResidence } from '../selectors'
 import Building from './Building';
 import Floor from './Floor';
+import Clock from './Clock';
 import './style.css';
 
 class residence extends Component {
@@ -11,6 +12,7 @@ class residence extends Component {
 
     return (
       <div>
+        <Clock/>
         <div>
           Résidence total: {price} L
         </div>
