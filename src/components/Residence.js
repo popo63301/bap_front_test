@@ -1,23 +1,38 @@
 import React, { Component } from 'react';
-import Floor from './Floor';
+import { connect } from 'react-redux';
 import Building from './Building';
+import Floor from './Floor';
 import './style.css';
 
-class Residence extends Component {
+class residence extends Component {
   render() {
+    const { buildings } = this.props
+
     return (
       <div>
         <div>
           Résidence total: 4000 L
         </div>
         <div>
-          <Building/>
-          <Building/>
-          <Building/>
+          <Building numero="A"/>
+          <Building numero="B"/>
+          <Building numero="C"/>
+          <Building numero="D"/>
         </div>
       </div>
     );
   }
 }
+
+const mapStateToProps = (state, props) => ({
+})
+
+const mapDispatchToProps = {
+}
+
+const Residence = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(residence)
 
 export default Residence;
