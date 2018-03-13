@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import './style.css';
 
 class Appartment extends Component {
   render() {
     return (
-      <div>hello
+      <div className="appartmentBox">
+        🏠Appartement n°1 (petit)
+        <br/>
+
+        <span className="appartmentWaterPrice">🚰 40L</span>
       </div>
     );
   }

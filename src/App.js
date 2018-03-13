@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import Residence from './components/Residence';
 
 class App extends Component {
   render() {
     return (
-      <div>hello
+      <div>
+      <Residence />
       </div>
     );
   }
