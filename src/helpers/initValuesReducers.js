@@ -1,8 +1,8 @@
 const mock = {
   prices: {
-    smallAppartment: 1,
-    bigAppartment: 2,
-    jacuzziAppartment: 3
+    small: 3,
+    big: 9,
+    jacuzzi: 19
   },
   floors: {
     1: {

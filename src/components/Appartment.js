@@ -4,20 +4,21 @@ import './style.css';
 
 class appartment extends Component {
   render() {
-    const { numero, type } = this.props
+    const { numero, type, conso } = this.props
 
     return (
       <div className="appartmentBox">
         🏠Appartement n°{numero} ({type==='small' ? 'petit' : type==='big' ? 'grand' : 'jacuzzi'})
         <br/>
 
-        <span className="appartmentWaterPrice">🚰 40L</span>
+        <span className="appartmentWaterPrice">🚰 {conso}L</span>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state, props) => ({
+  conso: state.prices[props.type]
 })
 
 const mapDispatchToProps = {

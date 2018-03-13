@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { getPriceResidence } from '../selectors'
 import Building from './Building';
 import Floor from './Floor';
 import './style.css';
 
 class residence extends Component {
   render() {
-    const { buildings } = this.props
+    const { buildings, price } = this.props
 
     return (
       <div>
         <div>
-          Résidence total: 4000 L
+          Résidence total: {price} L
         </div>
         <div>
           <Building numero="A"/>
@@ -25,6 +26,7 @@ class residence extends Component {
 }
 
 const mapStateToProps = (state, props) => ({
+  price: getPriceResidence(state)
 })
 
 const mapDispatchToProps = {
