@@ -26,12 +26,9 @@ const mapStateToProps = (state, props) => ({
   price: getPriceBuilding(state, props.numero)
 })
 
-const mapDispatchToProps = {
-}
-
 const Building = connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(building)
 
 export default Building;

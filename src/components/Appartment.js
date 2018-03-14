@@ -24,12 +24,9 @@ const mapStateToProps = (state, props) => ({
   conso: state.prices[props.type]
 })
 
-const mapDispatchToProps = {
-}
-
 const Appartment = connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(appartment)
 
 export default Appartment;

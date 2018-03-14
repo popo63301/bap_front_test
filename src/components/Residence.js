@@ -32,12 +32,9 @@ const mapStateToProps = (state, props) => ({
   price: getPriceResidence(state)
 })
 
-const mapDispatchToProps = {
-}
-
 const Residence = connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(residence)
 
 export default Residence;

@@ -26,12 +26,9 @@ const mapStateToProps = (state, props) => ({
   price: getPriceFloor(state, props.id)
 })
 
-const mapDispatchToProps = {
-}
-
 const Floor = connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(floor)
 
 export default Floor;
