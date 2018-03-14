@@ -8,7 +8,7 @@ class jacuzziButton extends Component {
     const { hasJacuzzi, toggleJacuzzi } = this.props
 
     return (
-      <div>
+      <div className="jacuzziButton">
         <button
           onClick={toggleJacuzzi}
         >

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import JacuzziButton from './JacuzziButton';
 import { increaseTime, decreaseTime, resetTime, toggleClock } from '../actions';
 import './style.css';
 
@@ -65,13 +66,26 @@ class clock extends Component {
 
     return (
       <div style={{fontSize:'40px'}}>
-        {minutes} minute{minutes>1 && 's'} passée{minutes>1 && 's'}<br/>
-        <div>
-          <span onClick={this.toggleClock}>{clockWorking? '⏸' : '▶️'}</span>
-          <span onClick={this.resetClock}>⏹</span>
+        <div className="containerClock">
+          {minutes} minute{minutes>1 && 's'} passée{minutes>1 && 's'}<br/>
+          <div>
+            <span
+              onClick={this.toggleClock}
+              className="clockButton"
+            >
+              {clockWorking? '⏸' : '▶️'}
+            </span>
+            <span onClick={this.resetClock}>⏹</span>
+          </div>
         </div>
-        <button onClick={() => increaseTime()}>Augmenter d'1 min</button><br/>
-        <button onClick={this.decreaseTimeManual}>Baisser d'1 min</button>
+
+        <div className="actionsContainer">
+          <div className="buttonIncrease">
+            <button onClick={() => increaseTime()}>Augmenter d'1 min</button>
+            <button onClick={this.decreaseTimeManual}>Baisser d'1 min</button>
+          </div>
+          <JacuzziButton/>
+        </div>
       </div>
     );
   }
