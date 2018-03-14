@@ -4,6 +4,7 @@ import { getPriceResidence } from '../selectors'
 import Building from './Building';
 import Floor from './Floor';
 import Clock from './Clock';
+import JacuzziButton from './JacuzziButton';
 import './style.css';
 
 class residence extends Component {
@@ -12,7 +13,14 @@ class residence extends Component {
 
     return (
       <div>
+        <div style={{
+          fontSize: '30px',
+          textAlign: 'center',
+          fontFamily: 'Roboto',
+          color: '#0074D9'
+        }}>BAP Water 👪💧 </div>
         <Clock/>
+        <JacuzziButton />
         <div>
           Résidence total: {price} L
         </div>

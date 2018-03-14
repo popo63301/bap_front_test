@@ -199,6 +199,11 @@ const mock = {
     D: {
       listFloors: [10,11,12,13,14]
     },
+  },
+  ui: {
+    jacuzzi: false,
+    time: 0,
+    clockWorking: false
   }
 }
 

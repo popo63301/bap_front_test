@@ -7,7 +7,10 @@ class appartment extends Component {
     const { numero, type, conso } = this.props
 
     return (
-      <div className="appartmentBox">
+      <div
+        className="appartmentBox"
+        style={{backgroundColor: type==='jacuzzi' && '#3D9970'}}
+      >
         🏠Appartement n°{numero} ({type==='small' ? 'petit' : type==='big' ? 'grand' : 'jacuzzi'})
         <br/>
 
