@@ -16,4 +16,4 @@
 
 
 ## Tests:
-Lancez la commande "npm run test" dans votre terminal
+- Lancez la commande "npm run test" dans votre terminal
